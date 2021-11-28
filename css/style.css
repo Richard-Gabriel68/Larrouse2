@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+}
+
+/* Menu  ----------- */
+
+header {
+    background-color: #da905e;
+    height: 50px;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    line-height: 50px;
+    width: 100%;
+    list-style: none;
+}
+li:first-child {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 0 1rem;
+}
+a:hover {
+    background-color: #92715c;
+}
+.models {
+    display: none;
+}
+
+.element {
+    width: 170px;
+    height: 180px;
+    padding: 0.5rem 0 0;
+    border-radius: 15px;
+    background-color: #ccc;
+    box-shadow: 4px 4px 10px #999898;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.element:hover {
+    background-color: #9e9e9e;
+    box-shadow: 4px 4px 10px #747474;
+    margin-top: -4px;
+}
+.imgPizza {
+    width: 80%;
+    margin-bottom: 0.5rem;
+}
+
+/* Pizzas  ---------- */
+
+.img {
+    background-image: url("../img/fundo-2000certo1.jpg");
+    background-size: cover;
+    background-position: left;
+    width: 100%;
+    height: 80vh;
+}
+.title {
+    background-color: #f00;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 2rem;
+}
+.content {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* Modal ------------ */
+
+.fundoModal {
+    background-color: #00000086;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: none;
+    transition: all ease 0.3s;
+}
+.modal {
+    background-color: #ececec;
+    border-radius: 30px;
+    width: 60%;
+    height: 70%;
+    display: flex;
+}
+.campoPizza {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.campoInfoPizza {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.campoInfoPizza .i {
+    background-color: #f5be76;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 1rem 0.5rem;
+    margin: 0.5rem 0;
+    width: 90%;
+}
+.modalActions {
+    width: 90%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+.modalActions .bu {
+    padding: 0.7rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.modalActions .buy {
+    background-color: #89eb50;
+}
+.modalActions .buy:hover {
+    background-color: #5b9c35;
+}
+.modalActions .closeModal {
+    background-color: /*#e43e3e*/transparent;
+}
+.modalActions .closeModal:hover {
+    background-color: #942929;
+}
+/* Responsividade ---------- */
+
+@media (max-width:600px) {
+    header {
+        width: 100%;
+    }
+    nav {
+        display: none;
+    }
+    .img {
+        background-position: center;
+        width: 100%;
+        height: 60vh;
+    }
+    .title {
+        width: 100%;
+        height: 100px;
+    }
+    .content {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:400px) {
+    .content {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal {
+        width: 90%;
+        height: 85%;
+        flex-direction: column;
+    }
+    .campoPizza img {
+        height: 70%;
+    }
+    .campoInfoPizza {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .campoInfoPizza .i {
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+        padding: 1rem 0.5rem;
+        margin: 0.3rem auto;
+        width: 90%;
+    }
+}
