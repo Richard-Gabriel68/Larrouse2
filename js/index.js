@@ -4,6 +4,7 @@ pizzaJson.map((item, index) => {
     let pizzaItem = s(".models .element").cloneNode(true);
     let modal = s(".fundoModal");
     let closeButton = s(".modal .closeModal");
+    let buyButton = s(".modal .buy")
 
     pizzaItem.querySelector(".name").innerHTML = item.name;
     pizzaItem.querySelector(".price").innerHTML = item.price.toFixed(2);
@@ -18,10 +19,14 @@ pizzaJson.map((item, index) => {
         modal.querySelector(".campoPizza img").src = item.img;
         modal.querySelector(".nomePizza").innerHTML = item.name;
         modal.querySelector(".descPizza").innerHTML = item.description;
-        modal.querySelector(".valorPizza").innerHTML = item.price;
+        modal.querySelector(".valorPizza").innerHTML = ` R$ ${item.price.toFixed(2)}`;
 
         closeButton.addEventListener("click", (e)=> {
             modal.style.display = "none";
+        })
+
+        buyButton.addEventListener("click", ()=> {
+            
         })
     })
 

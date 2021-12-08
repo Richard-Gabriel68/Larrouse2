@@ -71,6 +71,12 @@ a:hover {
     background-position: left;
     width: 100%;
     height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 70px;
+    font-weight: bold;
 }
 .title {
     background-color: #f00;
@@ -105,7 +111,8 @@ a:hover {
     transition: all ease 0.3s;
 }
 .modal {
-    background-color: #ececec;
+    background-color: #ffffff;
+    box-shadow: 3px 5px 8px #646464;
     border-radius: 30px;
     width: 60%;
     height: 70%;
@@ -123,12 +130,15 @@ a:hover {
     flex-direction: column;
 }
 .campoInfoPizza .i {
-    background-color: #f5be76;
+    background-color: #ffd49b;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
     padding: 1rem 0.5rem;
     margin: 0.5rem 0;
     width: 90%;
+}
+.campoInfoPizza .nomePizza {
+    font-weight: bold;
 }
 .modalActions {
     width: 90%;
@@ -142,16 +152,17 @@ a:hover {
     cursor: pointer;
 }
 .modalActions .buy {
-    background-color: #89eb50;
+    color: #fff;
+    background-color: #6bb83f;
 }
 .modalActions .buy:hover {
-    background-color: #5b9c35;
+    background-color: #46772a;
 }
 .modalActions .closeModal {
     background-color: /*#e43e3e*/transparent;
 }
 .modalActions .closeModal:hover {
-    background-color: #942929;
+    background-color: #ff2c2c;
 }
 /* Responsividade ---------- */
 
@@ -179,7 +190,7 @@ a:hover {
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:500px) {
     .content {
         width: 100vw;
         display: flex;
